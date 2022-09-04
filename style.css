@@ -134,8 +134,7 @@ footer{
     justify-content: center;
     color: white;
     padding: 1em;
-    opacity: 0;
-    transition: 3s;
+    
 }
 .logo-and-socials{
     display: flex;
