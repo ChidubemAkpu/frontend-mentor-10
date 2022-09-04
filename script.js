@@ -20,7 +20,7 @@ document.addEventListener('scroll', getThem)
 function getThem(){
     const height = window.innerHeight;
     [allTheItems, allTheNews,[forFooter]].forEach(a => Array.from(a).forEach(b => {
-        if(b.getBoundingClientRect().top < height - 80){
+        if(b.getBoundingClientRect().top < height - (height /3)){
             b.style.opacity = '1';
         } else{
             b.style.opacity = '0';
