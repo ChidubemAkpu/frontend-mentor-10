@@ -14,12 +14,12 @@ function avoidDefault(el){
     el.preventDefault();  
 }
 
-const [allTheItems, allTheNews, forFooter] = [document.querySelectorAll('.for-each'), document.querySelectorAll('.each-news'), document.querySelector('footer')];
+const [allTheItems, allTheNews] = [document.querySelectorAll('.for-each'), document.querySelectorAll('.each-news')];
 document.addEventListener('scroll', getThem)
 
 function getThem(){
     const height = window.innerHeight;
-    [allTheItems, allTheNews,[forFooter]].forEach(a => Array.from(a).forEach(b => {
+    [allTheItems, allTheNews].forEach(a => Array.from(a).forEach(b => {
         if(b.getBoundingClientRect().top < height - (height /3)){
             b.style.opacity = '1';
         } else{
