@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    font-family: "Public Sans", sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    align-items: center;
+}
+ul li{
+    list-style-type: none;
+    text-align: center;
+}
+header ul{
+    padding: 1em;
+    width: 90%;
+    position: absolute;
+    display: none;
+    right: 1em;
+    left: 1em;
+    top: 2em;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 3px black;
+    color: hsl(233, 26%, 24%);
+    transition: opacity 1s;
+    transition-timing-function: linear;
+
+}
+.open-close{
+    display: block;
+}
+header ul>li{
+    padding: 0.5em;
+}
+a{
+    text-decoration: none;
+    border-radius: 1em;
+    color: white;
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    transition: 1s;
+}
+a:hover{
+    background: linear-gradient(to left, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+header a{
+    text-decoration: none;
+    padding: 0.5em;
+}
+header>a {
+    display: none;
+}
+.for-each, .each-news{
+    opacity: 0;
+    transition: 3s;
+}
+.for-heading{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    text-align: center;
+}
+.for-heading img{
+    width: 20em;
+    object-fit: contain;
+}
+.for-heading a{
+    text-align: center;
+    width: 10em;
+    padding: 0.5em;
+    margin: auto;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: 700;
+}
+.for-heading .background{
+    background-image: url('images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 20em;
+    background-position: right;
+}
+.why-and-list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+}
+.news{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.normal-news{
+    text-align: center;
+    padding: 1em;
+    display: grid;
+    row-gap: 2em;
+}
+.normal-news *{
+    margin-top: 0.2em;
+}
+
+
+.news h6, .news h4, .news p{
+    text-align: left;
+}
+.news img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer{
+    background: hsl(233, 26%, 24%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.logo-and-socials{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.logo-and-socials > img{
+    width: 10em;
+    margin: auto;
+}
+.logo-and-socials a{
+    background: inherit;
+}
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.privacy-copyright{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+}
+.privacy-copyright a{
+    padding: 0.3em;
+    width: 10em;
+    margin: auto;
+}
+footer li{
+    padding: 0.3em;
+}
+.each-news h4:hover{
+    color: hsl(136, 65%, 51%);
+}
+p{
+    color:hsl(233, 8%, 62%);
+}
+@media screen and (min-width: 900px){
+    header ul{
+        padding: 0;
+        width: auto;
+        position: static;
+        display: flex;
+        box-shadow: 0 0 0;
+    
+    }
+    header li{
+        border-bottom: 4px solid white;
+        margin-left: 1em;
+    }
+    header li:hover{
+        cursor: pointer;
+        border-color:hsl(136, 65%, 51%);
+    }
+    
+    .normal-news{
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1em;
+        padding: 0;
+    }
+    .news{
+        text-align: left;
+        padding: 1em 2em;
+    }
+    .list-for-why{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+    }
+    .news img{
+        width: 100%;
+        height: 10em;
+        border-radius: 5px;
+    }
+    .hamburger{
+        display: none;
+    }
+    header a{
+        display: block;
+    }
+    .why-and-list{
+        text-align: left;
+        padding: 2em;
+    }
+    .for-heading .background{
+        background-image: url('images/bg-intro-desktop.svg');
+        background-size: cover;
+        background-position: left
+    }
+    .for-heading{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1em 3em;
+        text-align: left;
+    }
+    .writeup-link{
+        padding: 1em 20em 2em 2em;
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .background{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    footer{
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 1em 2em;
+    }
+    footer>ul{
+        display: flex;
+        justify-content: space-around;
+        text-align: left;
+        gap: 2em;
+    }
+    footer li{
+        padding: 0.2em;
+        text-align: left;
+    }
+    .logo-and-socials{
+        justify-content: space-between;
+        row-gap: 2em;;
+        
+    }
+}
